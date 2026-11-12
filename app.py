@@ -31,8 +31,11 @@ st.markdown(
     div[data-testid="stForm"] {border: none; padding: 0;}
     .card-title {font-size: 1.05rem; font-weight: 600; margin-bottom: .25rem;}
     div[data-testid="stFormSubmitButton"] button {
-        width: 100%; background: #ff4b4b; color: white; border: none;
-        font-weight: 600; padding: .7rem 0; border-radius: 8px;
+        width: 100%; min-height: 3.6rem; background: #ff4b4b; color: white; border: none;
+        font-weight: 600; padding: .7rem 0; border-radius: 10px;
+    }
+    div[data-testid="stFormSubmitButton"] button p {
+        font-size: 1.5rem; font-weight: 700; letter-spacing: .05em;
     }
     div[data-testid="stFormSubmitButton"] button:hover {background: #e03e3e; color: white;}
     </style>
@@ -108,10 +111,10 @@ with st.form("asd_form"):
         aq = []
         for i, q in enumerate(AQ_QUESTIONS):
             col = qa if i < 5 else qb
-            aq.append(col.radio(f"**AQ{i+1}.** {q}", yes_no, index=None, horizontal=True,
+            aq.append(col.radio(f"**Q{i+1}.** {q}", yes_no, index=None, horizontal=True,
                                 key=f"aq{i+1}"))
 
-    submitted = st.form_submit_button("Predict")
+    submitted = st.form_submit_button("Predict", width= "stretch")
 
 if submitted:
     required = [age, gender, ethnicity, country, relation, jaundice, family, used_app] + aq

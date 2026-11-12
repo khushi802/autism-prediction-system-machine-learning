@@ -3,7 +3,7 @@
 Autism Spectrum Disorder (ASD) Prediction is a machine learning project that estimates the likelihood of ASD traits from demographic details, clinical history and the 10 behavioural screening questions (AQ-10). The trained model is served through **Streamlit** web app.
 
 
-**Live demo:** _add your Streamlit Cloud link here_
+**Live demo:** https://autism-prediction-system-machine-learning-cefdcyocusjcaux7ioy4.streamlit.app/
 
 ---
 
